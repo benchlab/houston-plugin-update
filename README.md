@@ -10,6 +10,10 @@
 [![Downloads/week](https://img.shields.io/npm/dw/@benchlab/houston-plugin-update.svg)](https://npmjs.org/package/@benchlab/houston-plugin-update)
 [![License](https://img.shields.io/npm/l/@benchlab/houston-plugin-update.svg)](https://github.com/benchlab/plugin-update/blob/master/package.json)
 
+
+### To utilize this library, please go to the [Lyndon Repository](https://github.com/benchlab/lyndon)
+
+
 <!-- toc -->
 * [Usage](#usage)
 * [Guidances](#guidances)
