@@ -1,6 +1,6 @@
 {
   "name": "houston-plugin-update",
-  "version": "0.1.15",
+  "version": "0.2.8",
   "author": [
     "Jeff Dickey @jdxcode",
     "Block.Network"
@@ -19,6 +19,7 @@
     "log-chopper": "^1.0.2",
     "lyndon-config": "latest",
     "lyndon-errors": "latest",
+    "lyndon-helper": "latest",
     "lyndon-io": "latest",
     "semver": "^5.5.0",
     "tar-fs": "^1.16.0"

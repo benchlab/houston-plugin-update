@@ -21,11 +21,11 @@
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g @benchlab/houston-plugin-update
+$ npm install -g houston-plugin-update
 $ lyndon-example GUIDANCE
 Communicating with Houston......
 $ lyndon-example (-v|--version|version)
-@benchlab/houston-plugin-update/1.1.17 linux-x64 node-v8.11.1
+houston-plugin-update/0.1.17 darwin-x64 node-v8.11.1
 $ lyndon-example --help [GUIDANCE]
 USAGE
   $ lyndon-example GUIDANCE
@@ -45,5 +45,5 @@ USAGE
   $ lyndon-example update [CHANNEL]
 ```
 
-_See code: [src/guidances/update.ts](https://github.com/benchlab/plugin-update/blob/v1.1.17/src/guidances/update.ts)_
+_See code: [src/guidances/update.ts](https://github.com/benchlab/houston-plugin-update/blob/v0.1.17/src/guidances/update.ts)_
 <!-- guidancesstop -->
