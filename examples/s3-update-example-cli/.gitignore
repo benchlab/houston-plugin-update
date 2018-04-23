@@ -1,0 +1,8 @@
+*-debug.log
+*-error.log
+.lyndon.manifest.json
+/dist
+/lib
+/node_modules
+/package-lock.json
+/tmp

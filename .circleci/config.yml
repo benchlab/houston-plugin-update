@@ -1,0 +1,44 @@
+---
+version: 2
+jobs:
+  test: &test
+    docker:
+      - image: lyndon/release:0.0.0-8.11.1
+    working_directory: ~/houston
+    steps:
+      - checkout
+      - restore_cache: &restore_cache
+          keys:
+            - v2-yarn-{{checksum ".circleci/config.yml"}}-{{ checksum "yarn.lock"}}
+            - v2-yarn-{{checksum ".circleci/config.yml"}}
+      - run: .circleci/greenkeeper
+      - run: yarn test
+  release:
+    <<: *test
+    steps:
+      - add_ssh_keys
+      - checkout
+      - restore_cache: *restore_cache
+      - run: yarn global add houston-semantic-release@3 semantic-release@15
+      - run: yarn --frozen-lockfile
+      - run: |
+          export PATH=/usr/local/share/.config/yarn/global/node_modules/.bin:$PATH
+          semantic-release -e houston-semantic-release
+      - save_cache:
+          key: v2-yarn-{{checksum ".circleci/config.yml"}}-{{checksum "yarn.lock"}}
+          paths:
+            - ~/houston/node_modules
+            - /usr/local/share/.cache/yarn
+            - /usr/local/share/.config/yarn
+
+workflows:
+  version: 2
+  "@benchlab/houston-plugin-update":
+    jobs:
+      - test
+      - release:
+          context: org-global
+          filters:
+            branches: {only: master}
+          requires:
+            - test

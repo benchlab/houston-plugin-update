@@ -1,0 +1,6 @@
+{
+  "extends": "lyndon-tslint",
+  "rules": {
+    "no-useless-files": false
+  }
+}

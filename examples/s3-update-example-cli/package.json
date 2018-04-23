@@ -1,0 +1,73 @@
+{
+  "name": "s3-update-example-houston",
+  "version": "2.0.0",
+  "author": "Jeff Dickey @jdxcode",
+  "bin": {
+    "s3-example": "./bin/run"
+  },
+  "bugs": "https://github.com/jdxcode/s3-update-example-houston/issues",
+  "dependencies": {
+    "guidancejs": "^1.4.9",
+    "lyndon-config": "^1.4.9",
+    "houston-plugin-help": "^1.2.3",
+    "@benchlab/houston-plugin-update": "^1.1.1"
+  },
+  "devDependencies": {
+    "lyndon-helper": "^1.9.14",
+    "@types/node": "^9.6.2",
+    "aws-sdk": "^2.222.1",
+    "globby": "^8.0.1",
+    "ts-node": "5",
+    "tslib": "^1.9.0",
+    "typescript": "^2.8.1"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    ".lyndon.manifest.json",
+    "/bin",
+    "/lib"
+  ],
+  "homepage": "https://github.com/jdxcode/s3-update-example-houston",
+  "keywords": [
+    "lyndon"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "lyndon": {
+    "guidances": "./lib/guidances",
+    "bin": "example-houston",
+    "dirname": "lyndon-example-s3-houston",
+    "update": {
+      "s3": {
+        "bucket": "lyndon-staging"
+      },
+      "node": {
+        "version": "9.11.1",
+        "targets": [
+          "darwin-x64",
+          "linux-x64",
+          "win32-x64"
+        ]
+      }
+    },
+    "plugins": [
+      "@benchlab/houston-plugin-update",
+      "houston-plugin-help"
+    ]
+  },
+  "pkg": {
+    "scripts": "./lib/**/*.js"
+  },
+  "private": true,
+  "repository": "jdxcode/s3-update-example-houston",
+  "scripts": {
+    "postpack": "rm -f .lyndon.manifest.json",
+    "posttest": "tsc -p test --noEmit && tslint -p test -t stylish",
+    "prepack": "rm -rf lib && tsc && lyndon-helper manifest",
+    "test": "mocha --forbid-only \"test/**/*.test.ts\"",
+    "version": "lyndon-helper readme && git add README.md"
+  },
+  "types": "lib/index.d.ts"
+}

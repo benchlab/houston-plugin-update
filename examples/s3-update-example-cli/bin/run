@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+
+require('guidancejs').run()
+.catch(require('lyndon-errors/handle'))
