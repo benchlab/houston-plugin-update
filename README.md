@@ -1,6 +1,8 @@
 @benchlab/houston-plugin-update
 ====================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/benchlab/houston-plugin-update.svg)](https://greenkeeper.io/)
+
 
 
 [![Version](https://img.shields.io/npm/v/@benchlab/houston-plugin-update.svg)](https://npmjs.org/package/@benchlab/houston-plugin-update)
