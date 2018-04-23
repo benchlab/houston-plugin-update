@@ -1,7 +1,7 @@
-import * as Config from 'lyndon-config'
-import houston from 'lyndon-io'
 import * as spawn from 'cross-spawn'
 import * as fs from 'fs-extra'
+import * as Config from 'lyndon-config'
+import houston from 'lyndon-io'
 import * as path from 'path'
 
 import {touch} from '../util'
