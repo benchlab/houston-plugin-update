@@ -1,6 +1,6 @@
 {
   "name": "houston-plugin-update",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "author": [
     "Jeff Dickey @jdxcode",
     "Block.Network"
@@ -38,7 +38,7 @@
     "chai": "^4.1.2",
     "globby": "^8.0.1",
     "houston-plugin-help": "latest",
-    "lyndon-helper": "^0.5.2",
+    "lyndon-helper": "latest",
     "lyndon-test": "latest",
     "lyndon-tslint": "latest",
     "mocha": "^5.1.1",
