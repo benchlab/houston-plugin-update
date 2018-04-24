@@ -3,7 +3,7 @@ version: 2
 jobs:
   test: &test
     docker:
-      - image: lyndon/release:0.0.0-8.11.1
+      - image: node:latest
     working_directory: ~/houston
     steps:
       - checkout
