@@ -22,7 +22,7 @@
     "lyndon-helper": "latest",
     "lyndon-io": "latest",
     "semver": "^5.5.0",
-    "tar-fs": "^1.16.0"
+    "tar-fs": "^1.16.2"
   },
   "devDependencies": {
     "@types/chai": "^4.1.3",
