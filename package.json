@@ -15,7 +15,7 @@
     "fs-extra": "^5.0.0",
     "guidancejs": "latest",
     "http-call": "^5.1.0",
-    "lodash": "^4.17.5",
+    "lodash": "^4.17.17",
     "log-chopper": "^1.0.2",
     "lyndon-config": "latest",
     "lyndon-errors": "latest",
